@@ -25,8 +25,8 @@ function App() {
   return (
     <>
       {featuredData && <FeaturedMovie item={featuredData} />}
-      {movieList.map((e) => (
-        <MovieRow title={e.title} itens={e.itens} />
+      {movieList.map((e, key) => (
+        <MovieRow title={e.title} itens={e.itens} key={key} />
       ))}
 
       <GlobalStyle />
