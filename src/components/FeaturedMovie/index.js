@@ -29,9 +29,9 @@ export default function MovieRowList({ item }) {
             {item.overview}
           </MovieDescription>
           <FeaturedButtons>
-            <button type="submit">⊳ Assistir</button>
+            <button type="submit" className="watch">&#9658; Assistir</button>
             {' '}
-            <button type="submit">+ Minha lista</button>
+            <button type="submit" className="add">+ Minha lista</button>
           </FeaturedButtons>
           <MovieGenres>
             <strong>
