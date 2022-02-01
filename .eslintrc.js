@@ -24,5 +24,6 @@ module.exports = {
     'react/prop-types': 0,
     'no-unused-vars': 0,
     'default-case': 0,
+    'react/self-closing-comp': 0,
   },
 };

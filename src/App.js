@@ -8,6 +8,7 @@ import FeaturedMovie from './components/FeaturedMovie';
 function App() {
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+
   useEffect(() => {
     const loadAll = async () => {
       // Pegando a lista
@@ -19,7 +20,7 @@ function App() {
       const randomChosen = Math.floor(Math.random() * (originals[0].itens.data.results.length - 1));
       const ChosenVideo = originals[0].itens.data.results[randomChosen];
       const ChosenInfo = await Data.getMovieInfo(ChosenVideo.id, 'tv');
-      setFeaturedData(ChosenVideo);
+      setFeaturedData(ChosenInfo.data);
     };
     loadAll();
   }, []);
