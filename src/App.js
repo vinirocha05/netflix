@@ -18,7 +18,8 @@ function App() {
       const originals = list.filter((i) => i.slug === 'originals');
       const randomChosen = Math.floor(Math.random() * (originals[0].itens.data.results.length - 1));
       const ChosenVideo = originals[0].itens.data.results[randomChosen];
-      console.log(ChosenVideo);
+      const ChosenInfo = await Data.getMovieInfo(ChosenVideo.id, 'tv');
+      setFeaturedData(ChosenVideo);
     };
     loadAll();
   }, []);

@@ -60,4 +60,22 @@ export default {
       itens: await getData(`/discover/movie/?with_genres=99&api_key=${apiKey}&language=pt-BR`),
     },
   ],
+  getMovieInfo: async (movieId, type) => {
+    let info = {};
+    if (movieId) {
+      switch (type) {
+        case 'movie': {
+          info = await getData(`/movie/${movieId}?api_key=${apiKey}&language=pt-BR`);
+          break;
+        }
+        case 'tv': {
+          info = await getData(`/tv/${movieId}?api_key=${apiKey}&language=pt-BR`);
+          break;
+        }
+        default: info = null;
+      }
+    }
+
+    return info;
+  },
 };
