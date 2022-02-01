@@ -1,16 +1,21 @@
 import React from 'react';
+import {
+  ListArea, MovieList, MovieListItem, MovieRow,
+} from './styled';
 
-import { MovieList } from './styled';
-
-export default function MovieRow({ title, itens }) {
+export default function MovieRowList({ title, itens }) {
   return (
-    <MovieList>
+    <MovieRow>
       <h2>{title}</h2>
-      <div className="movieRow--listarea">
-        {itens.data.results.length > 0 && itens.data.results.map((e) => (
-          <img src={`https://image.tmdb.org/t/p/w300${e.poster_path}`} alt="" />
-        ))}
-      </div>
-    </MovieList>
+      <ListArea>
+        <MovieList>
+          {itens.data.results.length > 0 && itens.data.results.map((e, key) => (
+            <MovieListItem key={key}>
+              <img src={`https://image.tmdb.org/t/p/w300${e.poster_path}`} alt={e.original_title} />
+            </MovieListItem>
+          ))}
+        </MovieList>
+      </ListArea>
+    </MovieRow>
   );
 }
