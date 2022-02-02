@@ -29,5 +29,8 @@ export const MovieListItem = styled.div`
 `;
 
 export const ListArea = styled.div`
-  overflow-x: hidden
+  overflow-x: hidden;
+`;
+
+export const ButtonLeft = styled.div`
 `;
