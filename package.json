@@ -6,7 +6,6 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@material-ui/icons": "^4.11.2",
-    "@mui/icons-ma  terial": "^5.3.1",
     "@mui/icons-material": "^5.3.1",
     "@mui/material": "^5.4.0",
     "@testing-library/jest-dom": "^5.16.1",
@@ -14,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.25.0",
     "dotenv": "^14.3.2",
+    "eslint-config-react-app": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
@@ -26,12 +26,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -43,13 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint": "^8.8.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0"
   }
 }
