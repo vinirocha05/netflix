@@ -10,6 +10,7 @@ top: 0;
 left:0;
 right: 0;
 height: 70px;
+z-index:99;
 transition: all ease 600ms;
   img{
     height:60%;
