@@ -9,6 +9,10 @@ export default function MovieRowList({ item }) {
   const firstDate = new Date(item.first_air_date);
   const genresArray = [];
   item.genres.map((e) => (genresArray.push(e.name)));
+  let description = item.overview;
+  if (item.overview.length > 200) {
+    description = `${description.substring(0, 200)}...`;
+  }
 
   return (
     <Featured style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${item.backdrop_path})` }}>
@@ -26,7 +30,7 @@ export default function MovieRowList({ item }) {
             </div>
           </FeaturedInfo>
           <MovieDescription>
-            {item.overview}
+            {description}
           </MovieDescription>
           <FeaturedButtons>
             <button type="submit" className="watch">&#9658; Assistir</button>

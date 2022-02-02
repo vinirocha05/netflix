@@ -52,7 +52,9 @@ export const ButtonLeft = styled.div`
   :hover{
     opacity: 1;
   }
-
+  @media (max-widgth: 760px){
+    opacity: 1;
+  }
 `;
 
 export const ButtonRight = styled.div`
@@ -70,6 +72,9 @@ export const ButtonRight = styled.div`
   transition: all ease 500ms;
   opacity: 0;
   :hover{
+    opacity: 1;
+  }
+  @media (max-widgth: 760px){
     opacity: 1;
   }
 

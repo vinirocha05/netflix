@@ -5,6 +5,9 @@ export const Featured = styled.div`
   background-size: cover;
   background-position: center;
   margin-bottom: -80px;
+  @media (max-width: 760px){
+    min-height: 90vh;
+  }
 
 `;
 
@@ -23,12 +26,15 @@ export const TransparenciaHorizontal = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding-left:30px;
-  margin-top: -50px
+  margin-top: -50px;
 `;
 
 export const FeaturedName = styled.div`
   font-size: 60px;
   font-weight: bold;
+  @media (max-width: 760px){
+    font-size: 50px;
+  }
 `;
 
 export const FeaturedInfo = styled.div`
