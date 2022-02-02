@@ -46,6 +46,13 @@ function App() {
         <MovieRow title={e.title} itens={e.itens} key={key} />
       ))}
       <Footer />
+
+      {movieList.length <= 0
+      && (
+      <div className="loading">
+        <img src="https://thumbs.gfycat.com/MintyIndolentFruitbat-size_restricted.gif" alt="" />
+      </div>
+      ) }
       <GlobalStyle />
     </>
   );

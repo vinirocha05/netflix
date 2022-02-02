@@ -11,6 +11,7 @@ export const MovieRow = styled.div`
 export const MovieList = styled.div`
   width: 10000px;
   margin: 0 10px;
+  transition: all ease 500ms;
 `;
 
 export const MovieListItem = styled.div`
@@ -51,6 +52,7 @@ export const ButtonLeft = styled.div`
   :hover{
     opacity: 1;
   }
+
 `;
 
 export const ButtonRight = styled.div`
@@ -71,5 +73,4 @@ export const ButtonRight = styled.div`
     opacity: 1;
   }
 
-;
 `;
